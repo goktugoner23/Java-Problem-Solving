@@ -14,6 +14,10 @@ public class Main {
         stack.printStack();
         stack.pop();
         System.out.println(stack.search("customer1"));
+        stack.push("(asd)");
+        stack.pop();
+        stack.printStack();
+        System.out.println(stack.checkInFix("  ()/={}"));
 
         //stack kullanarak nasıl queue yapabilirim?
         //string input verilecek, bu string inputunun içinde 3 ane ayrı parantez şekli olacak ({[, bu stringin açılış ve kapanışları düzgün mü diye bakacak.
