@@ -19,6 +19,15 @@ public class Main {
         stack.printStack();
         System.out.println(stack.checkInFix("  ()/={}"));
 
+        System.out.println("");
+        System.out.println("QUEUE EXAMPLE");
+        Queue q = new Queue();
+        q.enQueue("customer1");
+        q.enQueue("customer2");
+        q.deQueue();
+        //q.deQueue();
+        q.printQueue();
+
         //stack kullanarak nasıl queue yapabilirim?
         //string input verilecek, bu string inputunun içinde 3 ane ayrı parantez şekli olacak ({[, bu stringin açılış ve kapanışları düzgün mü diye bakacak.
         //e.g. (ab (cd [ef] tt {gh} ) de) true döndürecek. (] false döndürecek. ([{}]) true dönüyor.
