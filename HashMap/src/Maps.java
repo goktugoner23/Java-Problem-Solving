@@ -15,10 +15,10 @@ public class Maps {
 
     public Map<Integer, AggregatedClass> aggregatedMapFunction()
     {
-        AggregatedClass goktug = new AggregatedClass(124, "goktug", "oner", LocalDate.of(1989, 8, 23));
-        AggregatedClass pulur = new AggregatedClass(234, "naim alperen", "pulur", LocalDate.of(1989, 6, 3));
-        AggregatedClass HSila = new AggregatedClass(867, "hande sila", "ergezer", LocalDate.of(1997, 9, 3));
-        AggregatedClass steph = new AggregatedClass(251, "stephania christina", "papoutsaki", LocalDate.of(1990, 12, 28));
+        AggregatedClass goktug = new AggregatedClass(124, "Goktug", "Oner", LocalDate.of(1989, 8, 23));
+        AggregatedClass pulur = new AggregatedClass(234, "Nick Arthur", "Price", LocalDate.of(1989, 6, 3));
+        AggregatedClass HSila = new AggregatedClass(867, "Helen syla", "Entourage", LocalDate.of(1997, 9, 3));
+        AggregatedClass steph = new AggregatedClass(251, "steph christine", "Papercut", LocalDate.of(1990, 12, 28));
 
         Map<Integer, AggregatedClass> a_map = new HashMap<>();
         a_map.put(goktug.getID(), goktug);

@@ -1,6 +1,5 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 public class OccurrenceClass {
     public Map<Character, Integer> mapFunction(String input)
