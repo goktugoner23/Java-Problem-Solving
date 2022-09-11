@@ -17,7 +17,7 @@ public class Main {
         stack.push("(asd)");
         stack.pop();
         stack.printStack();
-        System.out.println(stack.checkInFix("  ()/={}"));
+        System.out.println(stack.checkInFix("(([))]"));
 
         System.out.println("");
         System.out.println("QUEUE EXAMPLE");
