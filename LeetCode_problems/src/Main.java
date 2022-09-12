@@ -1,6 +1,5 @@
 //https://leetcode.com/problems/4sum/
-//https://leetcode.com/problems/rotate-list/
-//https://leetcode.com/problems/word-search/
+
 //https://leetcode.com/problems/linked-list-cycle/
 
 //Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
@@ -25,11 +24,12 @@
 //1 <= nums.length <= 200
 //-10^9 <= nums[i] <= 10^9
 //-10^9 <= target <= 10^9
+import java.util.Collections;
 import java.util.List;
 public class Main {
     public List<List<Integer>> fourSum(int[] nums, int target) {
-
         System.out.print("["+ " " + "]");
         return null;
     }
+
 }

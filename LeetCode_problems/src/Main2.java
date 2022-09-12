@@ -20,7 +20,17 @@
 
 
 public class Main2 {
-    public ListNode rotateRight(ListNode head, int k) {
+    public ListNode rotateRight(ListNode head, int k)
+    {
+        ListNode temp = head;
+        while (temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = head;
+        while(k>0){
+            rotateRight(head, k);
+            k--;
+        }
         return null;
     }
 
