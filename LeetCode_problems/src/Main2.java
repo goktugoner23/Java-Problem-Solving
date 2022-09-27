@@ -22,16 +22,33 @@
 public class Main2 {
     public ListNode rotateRight(ListNode head, int k)
     {
-        ListNode temp = head;
-        while (temp.next != null){
-            temp = temp.next;
+        if(k <= 0 || head == null){
+            return head;
         }
-        temp.next = head;
-        while(k>0){
-            rotateRight(head, k);
+        ListNode tail = head;
+        int size = 0;
+        while (tail.next != null){
+            tail = tail.next;
+            size++;
+        }
+        tail.next = head; //list is circular now
+        ListNode newList = head;
+        ListNode tp = head;
+        while (k > 0){
+            tp = tp.next;
             k--;
         }
-        return null;
+        while(tp != tail){
+            tp = tp.next;
+            newList = newList.next;
+        }
+        head = newList.next;
+        ListNode newtail = head;
+        for (int i=0; i<size; i++){
+            newtail = newtail.next;
+        }
+        newtail.next = null;
+        return head;
     }
 
     // Definition for singly-linked list.
