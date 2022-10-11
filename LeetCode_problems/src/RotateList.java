@@ -19,7 +19,7 @@
 
 
 
-public class Main2 {
+public class RotateList {
     public ListNode rotateRight(ListNode head, int k)
     {
         if(k <= 0 || head == null){

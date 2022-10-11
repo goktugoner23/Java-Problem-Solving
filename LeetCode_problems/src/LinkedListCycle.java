@@ -32,7 +32,7 @@
 //The number of the nodes in the list is in the range [0, 104].
 //-105 <= Node.val <= 105
 //pos is -1 or a valid index in the linked-list.
-public class Main4 {
+public class LinkedListCycle {
 
     public boolean hasCycle(ListNode head) {
         if (head == null){

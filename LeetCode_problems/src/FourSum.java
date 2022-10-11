@@ -21,9 +21,8 @@
 //1 <= nums.length <= 200
 //-10^9 <= nums[i] <= 10^9
 //-10^9 <= target <= 10^9
-import java.util.Collections;
 import java.util.List;
-public class Main {
+public class FourSum {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         System.out.print("["+ " " + "]");
         return null;

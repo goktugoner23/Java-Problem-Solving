@@ -224,5 +224,6 @@ public class Tree {
         if (value > node.value){
             return searchParentNode(value, node.right);
         }
+        return null;
     }
 }
