@@ -1,3 +1,8 @@
+import com.sun.source.doctree.SeeTree;
+
+import java.util.HashSet;
+import java.util.Set;
+
 /*https://leetcode.com/problems/valid-sudoku/
 Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
 Each row must contain the digits 1-9 without repetition.
@@ -38,9 +43,28 @@ board.length == 9
 board[i].length == 9
 board[i][j] is a digit 1-9 or '.'.*/
 public class ValidSudoku {
-    public boolean isValidSudoku(char[][] board){
-        int row = board.length;
-        int col = board[0].length;
-        return false;
+    public boolean isValidSudoku(char[][] board) {
+        HashSet<Character>[] rowSet = new HashSet[9];
+        HashSet<Character>[] colSet = new HashSet[9];
+        HashSet<Character>[] squareSet = new HashSet[9];
+        //need to make hashset for every row, column and also little squares
+        for (int r = 0; r < 9; r++) {
+            rowSet[r] = new HashSet<>();
+            colSet[r] = new HashSet<>();
+            squareSet[r] = new HashSet<>();
+        }
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                char val = board[i][j];
+                if (val == '.') continue;
+                int squarePos = (i / 3) * 3 + j / 3;
+                if (rowSet[i].contains(val) || colSet[j].contains(val) || squareSet[squarePos].contains(val))
+                    return false;
+                rowSet[i].add(val);
+                colSet[j].add(val);
+                squareSet[squarePos].add(val);
+            }
+        }
+        return true;
     }
 }
