@@ -1,6 +1,3 @@
-import java.util.Objects;
-import java.util.regex.Pattern;
-
 /*https://leetcode.com/problems/validate-ip-address/
 Given a string queryIP, return "IPv4" if IP is a valid IPv4 address, "IPv6" if IP is a valid IPv6 address or "Neither" if IP is not a correct IP of any type.
 A valid IPv4 address is an IP in the form "x1.x2.x3.x4" where 0 <= xi <= 255 and xi cannot contain leading zeros. For example, "192.168.1.1" and "192.168.1.0" are valid IPv4 addresses while "192.168.01.1", "192.168.1.00", and "192.168@1.1" are invalid IPv4 addresses.
@@ -24,6 +21,8 @@ Example 3:
 Input: queryIP = "256.256.256.256"
 Output: "Neither"
 Explanation: This is neither a IPv4 address nor a IPv6 address.*/
+
+import java.util.Objects;
 public class ValidateIpAddress {
     public static String validIpAddress(String queryIP){
         boolean isIpv4 = true;

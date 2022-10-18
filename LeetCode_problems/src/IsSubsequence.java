@@ -15,17 +15,17 @@ public class IsSubsequence {
         if(s == null ||t == null){
             return false;
         }
-        Set<Character> set = new LinkedHashSet<>();
-        Set<Character> sub = new LinkedHashSet<>();
-        for(int i = 0; i < t.length(); i++){
-            set.add(t.charAt(i));
+        if(s.equals("")){
+            return true;
         }
-        for(int i = 0; i < s.length(); i++){
-            sub.add(s.charAt(i));
+        char first = s.charAt(0);
+        int index = t.indexOf(first);
+        if(index >= 0){
+            String tPrime = t.substring(index + 1);
+            String sPrime = s.substring(1);
+            return isSubsequence(sPrime, tPrime);
         }
-        System.out.println(set);
-        System.out.println(sub);
-        return set.equals(sub);
+        return false;
     }
 
     public static void main(String[] args) {

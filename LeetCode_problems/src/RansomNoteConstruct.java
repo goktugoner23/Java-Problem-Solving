@@ -1,6 +1,3 @@
-import javax.swing.text.AttributeSet;
-import java.util.*;
-
 /*https://leetcode.com/problems/ransom-note/
 Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
 Each letter in magazine can only be used once in ransomNote.
@@ -18,6 +15,8 @@ Output: true
 Constraints:
 1 <= ransomNote.length, magazine.length <= 105
 ransomNote and magazine consist of lowercase English letters.*/
+
+import java.util.*;
 public class RansomNoteConstruct {
     public static boolean canConstruct(String ransomNote, String magazine){
         if(magazine == null || (magazine.equals("") && !ransomNote.equals(""))){
@@ -70,7 +69,7 @@ public class RansomNoteConstruct {
 
             m.put(c, m.getOrDefault(c, 0) - 1);
 
-            if(m.get(c) <0){
+            if(m.get(c) < 0){
                 return false;
             }
         }
