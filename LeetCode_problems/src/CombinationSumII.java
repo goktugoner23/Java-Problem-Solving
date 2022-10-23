@@ -26,7 +26,6 @@ Constraints:
 1 <= target <= 30*/
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 public class CombinationSumII {
     public static List<List<Integer>> combinationSum2(int[] candidates, int target) {

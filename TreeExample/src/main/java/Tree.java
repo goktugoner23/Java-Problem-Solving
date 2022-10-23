@@ -31,13 +31,47 @@ public class Tree {
     }
 
     public void preorderPrintTree(){
-        //homework
+        if(root == null){
+            System.out.println("Tree empty");
+        }
+        preorderPrintTreeR(root);
+    }
+
+    private void preorderPrintTreeR(TreeNode node){
+        if(node == null){
+            return;
+        }
+        System.out.println(node.value);
+        preorderPrintTreeR(node.left);
+        preorderPrintTreeR(node.right);
+    }
+    private void postorderPrintTreeR(TreeNode node){
+        if (node == null){
+            return;
+        }
+        postorderPrintTreeR(node.left);
+        postorderPrintTreeR(node.right);
+        System.out.println(node.value);
+    }
+    private void inorderPrintTreeR(TreeNode node){
+        if (node == null){
+            return;
+        }
+        inorderPrintTreeR(node.left);
+        System.out.println(node.value);
+        inorderPrintTreeR(node.right);
     }
     public void postorderPrintTree(){
-        //homework
+        if(root == null){
+            System.out.println("Tree empty");
+        }
+        postorderPrintTreeR(root);
     }
     public void inorderPrintTree(){
-        //homework
+        if(root == null){
+            System.out.println("Tree empty");
+        }
+        inorderPrintTreeR(root);
     }
 
     public void printDFT(){

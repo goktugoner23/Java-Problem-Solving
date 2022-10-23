@@ -18,8 +18,38 @@ Constraints:
 All the values of preorder are unique.*/
 public class ConstructBSTFromPreorderTraversal {
     public TreeNode bstFromPreorder(int[] preorder) {
-        return null;
+        if(preorder == null){
+            return null;
+        }
+        TreeNode root = null;
+        //adding values to root
+        for (int j : preorder) {
+            if (root == null) {
+                root = new TreeNode(j);
+                continue;
+            }
+            addNode(j, root);
+        }
+        return root;
     }
+
+    //we create a recursive function to add values as Nodes
+    private void addNode(int value, TreeNode pointer){
+        if (value <= pointer.val){
+            if (pointer.left != null){
+                addNode(value, pointer.left);
+            }else{
+                pointer.left = new TreeNode(value);
+            }
+        }else{
+            if (pointer.right != null){
+                addNode(value, pointer.right);
+            }else{
+                pointer.right = new TreeNode(value);
+            }
+        }
+    }
+
 
     public static class TreeNode {
         int val;
