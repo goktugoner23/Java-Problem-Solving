@@ -1,6 +1,7 @@
 package main.java;
 
 import java.io.*;
+import java.net.URL;
 import java.util.LinkedHashSet;
 import java.util.Set;
 //implement a function that returns all the unique chars in a given string
@@ -19,7 +20,9 @@ public class StringUniqueChars {
         return charset.size();
     }
     public static void main(String[] args) throws IOException {
-        File file = new File("loremipsum.txt");
+        String path = System.getProperty("user.dir");
+        File file = new File(path + "\\src\\main\\resources\\loremipsum.txt");
+        System.out.println(path + "\\src\\main\\resources\\loremipsum.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String s = br.readLine();
         System.out.println(uniqueChars("Alperen"));
