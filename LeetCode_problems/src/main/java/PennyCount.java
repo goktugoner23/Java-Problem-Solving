@@ -34,27 +34,25 @@ public class PennyCount {
         }
         return wallet;
     }
+    //complexity O(n)
 
-    //A faster version after a while of thinking lol
+    //A faster version after a while of thinking lol - complexity O(1)
     public static Map<Integer, Integer> pennyCount2(int amount){
         //there are 4 types of pennies which are 1, 5, 25 and 50.
         Map<Integer,Integer> wallet = new HashMap<>();
-        while(amount > 50){
+        if(amount > 50){
             wallet.put(50, amount/50);
             amount -= 50 * (amount/50);
         }
-        while(amount > 25){
+        if(amount > 25){
             wallet.put(25, amount/25);
             amount -= 25 * (amount/25);
         }
-        while(amount > 5){
+        if(amount > 5){
             wallet.put(5, amount/5);
             amount -= 5 * (amount/5);
         }
-        while(amount >= 1){
-            wallet.put(1, amount);
-            amount -= 1;
-        }
+        wallet.put(1, amount);
         return wallet;
     }
 
