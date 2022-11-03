@@ -1,4 +1,4 @@
-package main.java;//https://leetcode.com/problems/rotate-list/
+//https://leetcode.com/problems/rotate-list/
 //Given the head of a linked list, rotate the list to the right by k places.
 //Example 1:
 //
@@ -15,9 +15,7 @@ package main.java;//https://leetcode.com/problems/rotate-list/
 //The number of nodes in the list is in the range [0, 500].
 //-100 <= Node.val <= 100
 //0 <= k <= 2 * 10^9
-
-
-
+package main.java;
 
 public class RotateList {
     public ListNode rotateRight(ListNode head, int k)
