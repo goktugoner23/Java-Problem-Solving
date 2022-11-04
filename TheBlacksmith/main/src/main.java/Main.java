@@ -11,7 +11,7 @@ import java.util.EnumSet;
 
 public class Main extends ListenerAdapter {
     public static void main(String[] args) throws LoginException, InterruptedException {
-        String token = "MTAzODAyNzY0OTIyMzc3MDIxMg.GPUO8f.Fub4_SIsyBHbzxjQqECPH5UnIcykBBWwOtF_D4";
+        String token = "";
         EnumSet<GatewayIntent> intents = EnumSet.of(
                 GatewayIntent.GUILD_MEMBERS,
                 GatewayIntent.GUILD_EMOJIS_AND_STICKERS,
