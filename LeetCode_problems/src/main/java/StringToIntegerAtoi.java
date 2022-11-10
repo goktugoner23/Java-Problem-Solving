@@ -148,6 +148,9 @@ public class StringToIntegerAtoi {
                     result.add(9);
                     break;
                 case '-':
+                    if(!result.isEmpty()){
+                        return result;
+                    }
                 case '+':
                     break;
                 default:
@@ -158,7 +161,7 @@ public class StringToIntegerAtoi {
     }
 
     public static void main(String[] args) {
-        String asd = "-12";
+        String asd = "00000-42a1234";
         System.out.println(myAtoi(asd));
     }
 }
