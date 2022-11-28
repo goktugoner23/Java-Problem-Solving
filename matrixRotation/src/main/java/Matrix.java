@@ -29,8 +29,8 @@ public class Matrix {
     }
 
     public void printMatrix(){
-        for(int i=0; i< elements.length; i++){
-            for(int j=0; j<elements[i].length; j++){
+        for(int i=0; i < elements.length; i++){
+            for(int j=0; j <elements[i].length; j++){
                 System.out.print(elements[i][j]+" " +"\t");
             }
             System.out.println();
