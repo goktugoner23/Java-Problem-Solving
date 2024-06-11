@@ -47,4 +47,7 @@ public class Matrix {
         }
         return true;
     }
+
+    //time complexity = O(n^2)
+    //space complexity = O(1) because it uses one temporary variable to swap the columns. Thus in-place
 }
